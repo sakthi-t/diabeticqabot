@@ -1,5 +1,13 @@
 # app.py
 import os
+
+
+# Make Streamlit write config locally (avoids PermissionError in Spaces)
+os.environ["STREAMLIT_CONFIG_DIR"] = ".streamlit"
+os.environ["STREAMLIT_LOG_FOLDER"] = ".streamlit"
+os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
+
+
 import streamlit as st
 # from dotenv import load_dotenv
 from langchain.chains import ConversationalRetrievalChain
