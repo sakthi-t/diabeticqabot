@@ -9,7 +9,7 @@ from langchain_community.chat_models import ChatOpenAI
 import gradio as gr
 
 # ------------------ Load environment variables ------------------
-load_dotenv()
+# load_dotenv()
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 # ------------------ Paths ------------------
