@@ -1,7 +1,7 @@
 # app.py
 import os
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain_community.vectorstores import FAISS
@@ -9,8 +9,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chat_models import ChatOpenAI
 
 # ------------------ Load environment variables ------------------
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+OPENAI_API_KEY = os.environ.getenv("OPENAI_API_KEY")
 
 # ------------------ Paths ------------------
 VECTORSTORE_PATH = os.path.join("storage", "faiss_index")  # folder containing index.faiss and index.pkl
